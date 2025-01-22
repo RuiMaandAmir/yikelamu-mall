@@ -1,0 +1,57 @@
+# 在文件末尾添加这些翻译
+msgid "Welcome"
+msgstr "欢迎"
+
+msgid "View site"
+msgstr "查看网站"
+
+msgid "Change password"
+msgstr "修改密码"
+
+msgid "Log out"
+msgstr "退出"
+
+msgid "Authentication and Authorization"
+msgstr "权限管理"
+
+msgid "Groups"
+msgstr "用户组"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Change"
+msgstr "修改"
+
+msgid "Recent actions"
+msgstr "最近操作"
+
+msgid "My actions"
+msgstr "我的操作"
+
+msgid "None available"
+msgstr "暂无操作"
+
+msgid "Toggle theme (current theme: %s)"
+msgstr "切换主题（当前主题：%s）"
+
+msgid "Site administration"
+msgstr "网站管理"
+
+msgid "Administration"
+msgstr "管理"
+
+msgid "Users"
+msgstr "用户"
+
+msgid "Permissions"
+msgstr "权限"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Important dates"
+msgstr "重要日期"
+
+msgid "Personal info"
+msgstr "个人信息"

@@ -1,0 +1,48 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<div class="module">
+    <h2>订单概览</h2>
+    <div class="dashboard">
+        <div class="stat-box">
+            <h3>今日订单</h3>
+            <p class="big-number">{{ summary.today.count }}</p>
+            <p>销售额：￥{{ summary.today.sales|floatformat:2 }}</p>
+        </div>
+        <div class="stat-box">
+            <h3>待处理订单</h3>
+            <p class="big-number">{{ summary.pending_count }}</p>
+            <p>退款中：{{ summary.refunding_count }}</p>
+        </div>
+        <div class="stat-box">
+            <h3>总计</h3>
+            <p>订单数：{{ summary.total.count }}</p>
+            <p>销售额：￥{{ summary.total.sales|floatformat:2 }}</p>
+            <p>佣金：￥{{ summary.total.commission|floatformat:2 }}</p>
+        </div>
+    </div>
+    
+    <h2>每日统计</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>订单数</th>
+                <th>销售额</th>
+                <th>佣金</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stat in daily_stats %}
+            <tr>
+                <td>{{ stat.date|date:"Y-m-d" }}</td>
+                <td>{{ stat.order_count }}</td>
+                <td>￥{{ stat.total_sales|floatformat:2 }}</td>
+                <td>￥{{ stat.total_commission|floatformat:2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
